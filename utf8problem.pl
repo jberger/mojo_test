@@ -1,7 +1,5 @@
 #!/usr/bin/perl
 use Mojolicious::Lite;
-use Mojo::JSON;
-use Mojo::Util qw(slurp);
 use Mojo::ByteStream 'b';
 
 get '/japanese' => sub {

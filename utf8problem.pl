@@ -1,6 +1,4 @@
 #!/usr/bin/perl
-# run with command: morbo utf8problem.pl
-
 use Mojolicious::Lite;
 use Mojo::JSON;
 use Mojo::Util qw(slurp);

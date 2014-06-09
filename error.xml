@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <error_403_title>エラー：アクセスの禁止</error_403_title>
+  <error_403_desc>このリソースへのアクセス権がありません。</error_403_desc>
+  <error_404_title>エラー：見つかりません</error_404_title>
+  <error_404_desc>リソースが見つかりません。</error_404_desc>
+  <error_413_title>エラー：アップロードの上限を超えました</error_413_title>
+  <error_413_desc>アップロードしようとしているファイルサイズが大きすぎます。</error_413_desc>
+</strings>

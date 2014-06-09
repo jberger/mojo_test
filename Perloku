@@ -1,2 +1,2 @@
 #!/bin/sh
-./myapp.pl daemon -l http://*:$PORT -m development
+./utf8problem.pl daemon -l http://*:$PORT -m development

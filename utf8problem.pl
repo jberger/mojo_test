@@ -2,6 +2,7 @@
 use Mojolicious::Lite;
 use Mojo::JSON;
 use Mojo::Util qw(slurp);
+use Mojo::ByteStream 'b';
 
 get '/japanese' => sub {
     my $self     = shift;
@@ -9,7 +10,7 @@ get '/japanese' => sub {
     say "Reading $filename";
 
     my $strings;
-    my $dom = Mojo::DOM->new( slurp($filename) );
+    my $dom = Mojo::DOM->new( b($filename)->slurp->decode );
 
     foreach my $string ( $dom->find('*')->each ) {
         next if $string->type eq 'strings';

@@ -1,2 +1,3 @@
 #!/bin/sh
+export PERL5LIB="./local/lib/perl5:./local/lib/perl5/x86_64-linux-gnu-thread-multi";
 ./utf8problem.pl daemon -l http://*:$PORT -m development

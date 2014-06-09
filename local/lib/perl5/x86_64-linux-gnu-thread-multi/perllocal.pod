@@ -1,0 +1,44 @@
+=head2 Mon Jun  9 19:28:56 2014: C<Module> L<local::lib|local::lib>
+
+=over 4
+
+=item *
+
+C<installed into: /home/sigdev/git/devel/mojo_test/local/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.000012>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Jun  9 19:28:59 2014: C<Module> L<Mojolicious|Mojolicious>
+
+=over 4
+
+=item *
+
+C<installed into: /home/sigdev/git/devel/mojo_test/local/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 5.05>
+
+=item *
+
+C<EXE_FILES: script/hypnotoad script/mojo script/morbo>
+
+=back
+

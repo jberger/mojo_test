@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
-use XML::LibXML;
+use Mojo::ByteStream 'b';
 
 get '/japanese' => sub {
     my $self     = shift;
@@ -10,10 +10,11 @@ get '/japanese' => sub {
 
     my $strings;
 
-    my $dom = XML::LibXML->load_xml( location => $filename );
+    my $dom = Mojo::DOM->new( b($filename)->slurp->decode );
 
-    foreach my $string ( $dom->findnodes('/strings/*') ) {
-        $strings->{ $string->nodeName } = $string->textContent;
+    foreach my $string ( $dom->find('*')->each ) {
+        next if $string->type eq 'strings';
+        $strings->{ $string->type } = $string->text;
     }
 
     $self->render( json => $strings );

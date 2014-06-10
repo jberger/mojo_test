@@ -6,7 +6,7 @@ get '/japanese' => sub {
     my $self     = shift;
     my $filename = $self->app->home->rel_file('error.xml');
 
-    $self->app->log->debug("Reading $filename");
+    warn "Reading $filename";
 
     my $strings;
 

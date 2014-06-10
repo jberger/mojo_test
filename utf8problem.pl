@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 use Mojolicious::Lite;
 use XML::LibXML;
 

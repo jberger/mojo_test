@@ -5,7 +5,8 @@ use XML::LibXML;
 get '/japanese' => sub {
     my $self     = shift;
     my $filename = $self->app->home->rel_file('error.xml');
-    say "Reading $filename";
+
+    $self->app->log->debug("Reading $filename");
 
     my $strings;
 

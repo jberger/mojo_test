@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 use Mojo::ByteStream 'b';
+use Data::Dumper;
 
 get '/japanese' => sub {
     my $self     = shift;
@@ -16,6 +17,8 @@ get '/japanese' => sub {
         next if $string->type eq 'strings';
         $strings->{ $string->type } = $string->text;
     }
+
+    $self->app->log->debug( Dumper($strings) );
 
     $self->render( json => $strings );
 

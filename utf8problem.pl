@@ -15,6 +15,7 @@ get '/japanese' => sub {
         $strings->{ $string->type } = $string->text;
     }
 
+    $self->tx->res->headers->content_type('application/json; charset=utf-8');
     $self->render( json => $strings );
 
 };
